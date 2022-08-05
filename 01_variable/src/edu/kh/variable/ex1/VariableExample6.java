@@ -4,7 +4,7 @@ public class VariableExample6 {
 
 	public static void main(String[] args) {
 		
-		int a = 111;
+		int a = 676767;
 		
 		
 
