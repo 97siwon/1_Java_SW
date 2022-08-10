@@ -167,7 +167,29 @@ public class LoopPractice {
 	
 	
 	
-	public void ex9() {
+	public void ex9() { // ***
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+			for(int i = 1; i <= num ; i++) {
+				for(int j = 1; j <= num; j++) {
+					if(j <= num-i) {
+						System.out.print(" ");
+					} else {
+						System.out.print("*");
+					}
+					
+				}
+				System.out.println();
+			}
+
+	}
+	
+	
+	public void ex10() {
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -176,20 +198,18 @@ public class LoopPractice {
 		
 		for(int row = 1; row <= num; row++) {
 			for(int col = 1; col <= row; col++) {
-				System.out.printf("%numc", "*");
+				System.out.print("*");
 			}
-			System.out.println();
+			for(int i = num-1; i >= 1; i--) {
+				for(int j = i; j >= 1; j--) {
+					System.out.print("*");
+				}
+			
+			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println();
+
 	}
-	
+
+
 }
