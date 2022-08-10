@@ -125,48 +125,50 @@ public class ConditionPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// 변수의 장점 : 재사용성
+		
 		System.out.print("중간 고사 점수 : ");
-		int num1 = sc.nextInt();
+		double midTerm = sc.nextInt(); // int로 입력 받아도 대입 연산 시 double로 자동 형변환
 
 		System.out.print("기말 고사 점수 : ");
-		int num2 = sc.nextInt();
+		double finalTerm = sc.nextInt();
 		
 		System.out.print("과제 점수 : ");
-		int num3 = sc.nextInt();
+		double report = sc.nextInt();
 		
 		System.out.print("출석 횟수 : ");
-		int num4 = sc.nextInt();
+		double attendance = sc.nextInt();
 		
-		// 점수 비율
-		double num11 = num1 * 0.2; 
-		double num22 = num2 * 0.3;
-		double num33 = num3 * 0.3;
-		double num44 = num4;
+		// 각각의 점수를 비율에 맞게 변경
+		midTerm *= 0.2; // midTerm = midTerm * 2
+		finalTerm *= 0.3;
+		report *= 0.3;
+		// attendance *= 1; // attendance = attendance * 5 * 0.2;
 				
-		double sum = num11 + num22 + num33 + num44;
+		System.out.println("============== 결과 =================");
 		
-		if(sum < 70) {
-			System.out.println("============== 결과 ================");
-			System.out.println("중간 고사 점수(20) : " + num11);
-			System.out.println("기말 고사 점수(30) : " + num22);
-			System.out.println("과제 점수(30) : " + num33);
-			System.out.println("출석 점수(20) : " + num44);
-			System.out.println("총점 : " + sum);
-			System.out.println("Fail [점수 미달]");
-		} else if(num4 <= (num4 * 0.3)){
-			System.out.println("Faile [출석 횟수 부족 (" + num4 + "/20)]" );		
-		} else {
-			System.out.println("============== 결과 ================");
-			System.out.println("중간 고사 점수(20) : " + num11);
-			System.out.println("기말 고사 점수(30) : " + num22);
-			System.out.println("과제 점수(30) : " + num33);
-			System.out.println("출석 점수(20) : " + num44);
-			System.out.println("총점 : " + sum);
-			System.out.println("PASS");
+		if(attendance <= 20 *(1 - 0.3)) { // 14번 이하 출석 했을 경우
+			System.out.println("Fail [출석 횟수 부족] (" + (int)attendance + "/20)");
+		                                                    // 소수점 버림
+		} else { // 출석 만족
+			System.out.printf("중간 고사 점수(20) : %.1f \n" , midTerm);
+			System.out.printf("기말 고사 점수(30) : %.1f \n" , finalTerm);
+			System.out.printf("과제 점수(30)     : %.1f \n" , report);
+			System.out.printf("출석 점수(20)     : %.1f \n" , attendance);
+			
+			double sum = midTerm + finalTerm + report + attendance;
+			
+			System.out.printf("총점 : %.1f \n", sum);
+			
+			if(sum >= 70.0) {
+				System.out.println("PASS");
+			} else {
+				System.out.println("Fail [점수 미달]");
+			}
 		}
 		
-		
 	}
+	
 	
 	
 	
