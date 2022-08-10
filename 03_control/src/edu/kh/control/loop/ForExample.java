@@ -215,5 +215,109 @@ public class ForExample {
 	}
 	
 	
+	public void ex9() { // [기초]
+		
+		// for, %(나머지), if-else
+		
+		// 1부터 20까지 1씩 증가하며 출력하면서 
+		// 단, 5의 배수에는 ()를 붙혀서 출력
+		
+		// ex) 1 2 3 4 (5) 6 7 8 9 (10) 11 12 13 14 (15) 16 17 18 19 (20)
+		
+		for(int i = 1; i <= 20; i++) {
+			if(i % 5 == 0) {
+				System.out.print("(" + i + ") ");
+			} else {
+				System.out.print(i + " ");
+			}
+		}
+		
+	}
+	
+	
+	public void ex10() {
+		
+		// for, if, Scanner, 논리 연산자, printf
+		
+		// 구구단 출력
+		
+		// 2~9 사이 수를 하나 입력 받아
+		// 해당하는 수의 단을 출력
+		// 단, 입력 받은 수가 2~9 사이가 아니라면
+		// "잘못 입력하셨습니다." 출력
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("단(2~9) 입력 : ");
+		int dan = sc.nextInt();
+				
+		if(dan < 2 || dan > 9 ) { // dan이 2~9사이가 아니라면
+			System.out.println("잘못 입력하셨습니다.");
+		} else {
+			for(int i = 1; i <= 9 ; i++) {
+				System.out.printf("%d X %d = %d \n", dan, i, dan*i );
+			}
+		}
+		
+		System.out.println("=================================");
+		
+		// 역순 출력
+		if(dan < 2 || dan > 9 ) { // dan이 2~9사이가 아니라면
+			System.out.println("잘못 입력하셨습니다.");
+		} else {
+			for(int i = 9; i >= 1 ; i--) {
+				System.out.printf("%d X %d = %d \n", dan, i, dan*i );
+			}
+		}
+		
+	}
+	
+	// ======================================================================
+	// ======================================================================
+	
+	// [중첩 반복문]
+
+	public void ex11() {
+		
+		// 12345
+		// 12345
+		// 12345
+		// 12345
+		
+		for(int x = 1; x<=4; x++) { // 4번 반복
+			
+			// 12345
+			for(int i = 1; i <= 5; i++) {
+				System.out.print(i);
+			}
+			
+			System.out.println();
+		}
+		
+	}
+	
+	
+	public void ex12() { // [응용]
+		
+		// 구구단 2단부터 9단까지 모두 출력
+		
+		// 2X1=2 2X2=4 2X3=6 ...
+		// 3X1=3 3X2=6 3X3=9 ...
+		// 4X1=4 ...
+		// ...
+		// 9X1=9 ...
+		
+		for(int dan = 2; dan <= 9; dan++) {
+			for(int i = 1; i <= 9; i++) {
+				System.out.printf("%dX%d=%d ", dan, i, dan*i);
+			}
+			System.out.println();
+		}	
+	}
+	
+	
+	
+	
+	
 	
 }
