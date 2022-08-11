@@ -15,7 +15,10 @@ public class LoopPracticeRun {
 //		lp.ex7();
 //		lp.ex8();
 //		lp.ex9();
-		lp.ex10();
+//		lp.ex10();
+//		lp.ex11();
+//		lp.ex12();
+		lp.ex13();
 
 		
 	}
