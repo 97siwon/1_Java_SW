@@ -176,7 +176,7 @@ public class BranchExample {
 		
 		int count = 1;
 		
-		while(!(ran == input)) {
+		while(ran != input) {
 			
 			System.out.print(count++ + "번 입력 : ");
 			input = sc.nextInt();
@@ -191,7 +191,6 @@ public class BranchExample {
 				}
 			}
 		}
-	
 	}
 	
 	
