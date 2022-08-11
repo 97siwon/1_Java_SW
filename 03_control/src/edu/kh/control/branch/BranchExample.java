@@ -221,5 +221,73 @@ public class BranchExample {
 	}
 	
 	
+	public void rpsGame() {
+		
+	    // 가위 바위 보 게임
+		   
+	    // 몇판? : 3
+	   
+	    // 1번째 게임
+	    // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+	    // 컴퓨터는 [보]를 선택했습니다.
+	    // 플레이어 승!
+	    // 현재 기록 : 1승 0무 0패
+	   
+	    // 2번째 게임
+	    // 가위/바위/보 중 하나를 입력 해주세요 :  보
+	    // 컴퓨터는 [보]를 선택했습니다.
+	    // 비겼습니다.
+	    // 현재 기록 : 1승 1무 0패
+	   
+	    // 3번째 게임
+	    // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+	    // 컴퓨터는 [바위]를 선택했습니다.
+	    // 졌습니다ㅠㅠ
+	    // 현재 기록 : 1승 1무 1패
+	
+		
+		int ran = (int)(Math.random() * 3);
+		// --> 0/1/2
+		// 0 -> 가위
+		// 1 -> 바위
+		// 2 -> 보
+		
+		
+		System.out.println(ran);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int count = 1;
+		
+		while(true) {
+			System.out.println(count++ + "번째 게임");
+			
+			String str;
+				
+			if(ran == 0) {
+				str = "가위";
+			} else if(ran == 1) {
+				str = "바위";
+			} else {
+				str = "보";
+			}
+			
+			System.out.print("가위/바위/보 중 하나를 입력해주세요 : ");
+			String input = sc.next();
+			
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다. \n", str);
+			
+			if(str == input) {
+				System.out.println("비김");
+			}
+			
+			
+		}
+		
+		
+		
+		
+	}
+	
 	
 }
