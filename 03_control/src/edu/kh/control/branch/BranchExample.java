@@ -172,25 +172,52 @@ public class BranchExample {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int input = 0;
 		
+		// 시원 풀이
+//		int input = 0;
+//		
+//		int count = 1;
+//		
+//		while(ran != input) {
+//			
+//			System.out.print(count++ + "번 입력 : ");
+//			input = sc.nextInt();
+//			
+//			if(ran == input) {
+//				System.out.println("정답 입니다! (총 입력 횟수 : " + (count-1) + "회)");
+//			} else {
+//				if (ran > input) {
+//					System.out.println("UP");
+//				} else {
+//					System.out.println("DOWN");
+//				}
+//			}
+//		}
+//		
+		// 선생님 풀이
 		int count = 1;
 		
-		while(ran != input) {
+		while(true) {
+			System.out.print(count + "번 입력 : ");
+			int input = sc.nextInt();
 			
-			System.out.print(count++ + "번 입력 : ");
-			input = sc.nextInt();
-			
-			if(ran == input) {
-				System.out.println("정답 입니다! (총 입력 횟수 : " + (count-1) + "회)");
-			} else {
-				if (ran > input) {
-					System.out.println("UP");
-				} else {
-					System.out.println("DOWN");
-				}
+			if(ran == input) { // 난수 = 입력값
+				
+				System.out.printf("정답 입니다! (총 입력 횟수 : %d회) \n", count);
+				break; // while문 종료
+				
+			} else if(ran > input) { // 난수 > 입력값
+				
+				System.out.println("UP");
+				
+			} else { // 난수 < 입력값
+				
+				System.out.println("DOWN");
 			}
+			
+			count++;
 		}
+		
 	}
 	
 	
