@@ -162,18 +162,18 @@ public class ConditionExample {
 		
 		String result;
 		// 1번 풀이
-	  /*if(age < 0 || age > 100) {
-			result = "잘못 입력하셨습니다.";
-		} else {
-			if(age < 12) {
-				result = "적정 연령이 아닙니다.";
-			} else {
-				if(height < 140.0) {
-					result = "적정 키가 아닙니다.";
-				} else {
-					result = "탑승 가능";
-				}
-			}*/
+//		if(age < 0 || age > 100) {
+//			result = "잘못 입력하셨습니다.";
+//		} else {
+//			if(age < 12) {
+//				result = "적정 연령이 아닙니다.";
+//			} else {
+//				if(height < 140.0) {
+//					result = "적정 키가 아닙니다.";
+//				} else {
+//					result = "탑승 가능";
+//				}
+//			}
 		
 		
 		// 2번 풀이
