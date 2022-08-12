@@ -257,28 +257,67 @@ public class ArrayExample {
 			sum += scoreArr[i]; // 점수를 입력 받자마자 sum에 누적
 		}
 		
+		// 최고 / 최저점 구하기
+		int max = scoreArr[0];
+		int min = scoreArr[0];
+		// 배열의 첫 번째 인덱스값을 최고/최저의 비교 기준으로 삼음.
+		
+		
+		// break point를 지정한 라인 이전에 멈춘다.
+		// for문에 break point를 지정하면 증감식이 해석되기 전에 멈춘다.(debug mode)
+		for(int i=1; i < scoreArr.length; i++) {
+			
+			if(scoreArr[i] > max) { // 기존 최고점보다 scoreArr[i] 값이 더 큰 경우
+				max = scoreArr[i];
+			}
+			
+			if(scoreArr[i] < min) { // 기존 최저점보다 scoreArr[i] 값이 더 작은 경우
+				min = scoreArr[i];
+			}
+		}
+
 		System.out.println();
 		
 		System.out.println("합계 : " + sum);
 		System.out.println("평균 : " + (double)sum / scoreArr.length);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("최고점 : " + max);
+		System.out.println("최저점 : " + min);
+			
 	}
 	
 	
-	
+	public void ex8() {
+		
+		// 배열 내 데이터 검색
+		
+		// 입력 받은 정수가 배열에 존재하면 몇 번 인덱스에 존재하는지 출력
+		// 단, 없다면 "존재하지 않습니다." 출력
+		
+		int[] arr = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int search = sc.nextInt();
+		
+		
+		boolean flag = true;
+		// for문이 종료된 후에 true : 존재하지 않는다.
+		// for문이 종료된 후에 false : 존재한다.
+		
+		// arr 배열 순차 접근 (반복 접근)
+		for(int i=0; i < arr.length; i++) {
+			
+			if( arr[i] == search) { // arr[i] 값이 입력 받은 값과 같다면
+				System.out.println(i + "번째 인덱스에 존재합니다.");
+				flag = false; // flag 값을 변경
+				break; // 중복 데이터가 없으면 추가 검색을 하지 않아도 됨 
+			} 
+		}
+		
+		if(flag) {
+			System.out.println("존재하지 않습니다.");
+		}
+			
+	}
 }
