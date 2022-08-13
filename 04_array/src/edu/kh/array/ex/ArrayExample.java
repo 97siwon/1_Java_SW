@@ -361,9 +361,9 @@ public class ArrayExample {
 			}
 		}
 		
+		// Arrays.sort(배열명) : 배열 내 값을 오름차순으로 정렬
+		// -> JAVA가 미리 만들어서 제공 
 		Arrays.sort(lotto);
-		
-		
 		
 		// lotto 배열에 저장된 모든 값 출력
 		System.out.println(Arrays.toString(lotto));
