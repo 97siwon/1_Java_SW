@@ -11,9 +11,15 @@ public class ArrayExampleRun {
 //		arrayEx.ex3();
 //		arrayEx.ex4();
 //		arrayEx.ex5();
-//		arrayEx.ex6();
+//		arrayEx.ex6();s
 //		arrayEx.ex7();
-		arrayEx.ex8();
+//		arrayEx.esx8();
+		arrayEx.createLottoNumber();
+		
+		
+		
+		
+		
 
 	}
 

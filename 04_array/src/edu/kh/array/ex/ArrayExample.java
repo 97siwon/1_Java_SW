@@ -320,4 +320,66 @@ public class ArrayExample {
 		}
 			
 	}
+	
+	
+	
+	// 로또 번호 생성
+	public void createLottoNumber() {
+		
+		// 배열을 이용한 중복 데이터 제거 + 정렬
+		
+		// 1. 1~45사이의 중복되지 않는 난수 6개
+		// 2. 생성된 난수를 오름 차순 정렬 
+		
+		System.out.println("***** 로또 번호 생성기 *****");
+		
+		// 난수 6개를 저장할 배열 선언 및 할
+		int[] lotto = new int[6];
+		
+		// 난수를 생성하여 lotto 배열에 추
+		for(int i = 0; i<lotto.length;i++) {
+			
+			int ran = (int)(Math.random() * 45 +1);
+			// 1~45 사이 난수
+			
+			//난수 배열 요소에 대입 
+			lotto[i] = ran;
+			
+			
+			// 현재 인덱스(i) 이전의 요소를 순차 접근 
+			for(int x=0; x < i ;x++) {
+				
+				if(lotto[x] == ran) { 
+					i--; // i값을 인위적으로 감소시켜  
+					     // 바깥쪽 for의 증감식 (i++)이 실행되었을 때
+					     // i값이 현재 값을 유지하도록 만든다.
+					     // (화살표를 왼쪽 1칸 + 오른쪽 1칸 == 제자리)
+					break; // 추가 검사가 불필요 하기 때문에 멈춤
+				
+				}
+
+			}
+		}
+		
+		Arrays.sort(lotto);
+		
+		
+		
+		// lotto 배열에 저장된 모든 값 출력
+		System.out.println(Arrays.toString(lotto));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 }
