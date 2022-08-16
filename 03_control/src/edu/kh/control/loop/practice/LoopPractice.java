@@ -409,15 +409,15 @@ public class LoopPractice {
 			
 		// for문을 이용한 풀이
 		// for(int i = input - row ; i >= 1 ; i--)
-		for(int i = input -1; i >= row; i--) {
-			System.out.print(" ");
-		}
+			for(int i = input -1; i >= row; i--) {
+				System.out.print(" ");
+			}
 
-		for(int col = 1; col <= row * 2 -1; col++) {	
+			for(int col = 1; col <= row * 2 -1; col++) {	
 			System.out.print("*");
-		}
+			}
 		
-		System.out.println(); // 줄바꿈
+			System.out.println(); // 줄바꿈
 		}
 
 	}
