@@ -368,18 +368,125 @@ public class ArrayExample {
 		// lotto 배열에 저장된 모든 값 출력
 		System.out.println(Arrays.toString(lotto));
 		
+	
+	}
+	
+	
+	public void ex9() {
+		
+		// 얕은 복사
+		// - 참조하는 주소만을 복사하여
+		// 서로 다른 참조변수가 하나의 배열(또는 객체)를 참조하게 하는 복사 방법
+		
+		// 특징 : 하나의 배열을 참조하기 때문에 값을 공유하게 된다.
+		
+		int[] arr = {99,70,80,50,40};
+		
+		// arr변수에 저장된 배열의 시작 주소를 copyArr에 대입(얕은 복사)
+		int[] copyArr = arr;
 		
 		
+		// 주소 확인
+		System.out.println("arr : " + arr);
+		System.out.println("copyArr : " + copyArr);
 		
+		System.out.println("[변경 전]");
+		System.out.println("arr : " + Arrays.toString(arr));
+		System.out.println("copyArr : " + Arrays.toString(copyArr));
 		
+		// 복사본의 값을 변경 -> 원본도 값이 변함 == 값을 공유(얕은 복사 특징) 
+		copyArr[2] = 10000;
 		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("[변경 후]");
+		System.out.println("arr : " + Arrays.toString(arr));
+		System.out.println("copyArr : " + Arrays.toString(copyArr));
 		
 	}
+	
+	
+	public void ex10() {
+		
+		// 깊은 복사
+		// - 원본과 같은 자료형, 크기의 새로운 배열을 만들어 
+		//   원본의 데이터를 모두 복사하는 방법 
+		// == 복제 
+		
+		// -> 원본 데이터를 보존하면서
+		//    복사본의 데이터 가공을 진행하는 경우에 많이 사용 
+		
+		int[] arr = {99,70,80,50,40};
+		
+		// 깊은 복사를 위한 배열을 선언 및 할당 
+		int[] copyArr = new int[arr.length];
+		
+		// 원본 데이터를 모두 복사 
+		
+		// 1) for문을 이용한 방법 (index가 동일하다는 특징을 이용) 
+//		for(int i=0; i<copyArr.length;i++) {
+//			copyArr[i] = arr[i];
+//		}
+
+		
+		// 2. System.arraycopy(원본배열, 원본 복사 시작 인덱스, 
+		//					복사배열, 복사배열의 삽입 시작 인덱스, 복사길이);
+//		System.arraycopy( arr, 0, copyArr, 0, arr.length);
+		
+		
+		// 3. 복사할 배열 참조 변수 = Arrays.copyOf(원본배열, 복사할 길이)
+		copyArr = Arrays.copyOf(arr,arr.length);
+		
+		
+		// 주소 확인 -> 다름 
+		System.out.println("arr : " + arr);
+		System.out.println("copyArr : " + copyArr);
+		
+		System.out.println("[변경 전]");
+		System.out.println("arr : " + Arrays.toString(arr));
+		System.out.println("copyArr : " + Arrays.toString(copyArr));
+		
+		// 복사본의 값을 변경 -> 데이터 공유X -> 서로 다른 배열 
+		copyArr[2] = 10000;
+		
+		System.out.println("[변경 후]");
+		System.out.println("arr : " + Arrays.toString(arr));
+		System.out.println("copyArr : " + Arrays.toString(copyArr));	
+		
+	}
+	
+	public void ex11() {
+		// null 의미
+		// - 참조 하는 것(배열, 객체)이 없다를 의미하는 값
+		
+		int[] arr1 = new int[3];
+		
+		System.out.println(arr1 == null);
+		// arr1 == null -> false == arr1 참조 변수가 무언가를 참조하고 있다.
+		
+		if(arr1 != null) { // arr1이 참조하는 배열이 있을 때에만 수
+			System.out.println(arr1[0]);
+		}
+		
+		System.out.println("==========================================");
+		
+//		int[] arr2; 
+		// 배열 참조 변수 선언만 했을 때 == 저장된 값이 없다. 
+		
+		int[] arr2 = null;
+		// 배열 참조 변수 선언 및 null 초기화 
+		// == 값은 있으나 참조하는게 없다라는  
+		
+		System.out.println(arr2);
+		
+		// arr2가 참조하는 배열이 없을 때 
+		// 새로운 배열을 생성하여 그 시작 주소를 arr2에 대입 
+		if(arr2 == null) {
+			arr2 = new int[4];
+		}
+		System.out.println(arr2);
+		
+	}
+		
+		
+	
+	
 }
