@@ -368,18 +368,9 @@ public class ArrayExample {
 		// lotto 배열에 저장된 모든 값 출력
 		System.out.println(Arrays.toString(lotto));
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
+
+	
+	
+	
 }

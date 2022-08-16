@@ -14,12 +14,15 @@ public class ArrayExampleRun {
 //		arrayEx.ex6();s
 //		arrayEx.ex7();
 //		arrayEx.esx8();
-		arrayEx.createLottoNumber();
+//		arrayEx.createLottoNumber();
 		
 		
+		ArrayExample2 arrayEx2 = new ArrayExample2();
 		
-		
-		
+//		arrayEx2.ex1();
+//		arrayEx2.ex2();
+//		arrayEx2.ex3();
+		arrayEx2.ex4();
 
 	}
 
