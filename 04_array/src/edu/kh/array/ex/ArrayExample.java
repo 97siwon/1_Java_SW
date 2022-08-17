@@ -333,10 +333,10 @@ public class ArrayExample {
 		
 		System.out.println("***** 로또 번호 생성기 *****");
 		
-		// 난수 6개를 저장할 배열 선언 및 할
+		// 난수 6개를 저장할 배열 선언 및 할당
 		int[] lotto = new int[6];
 		
-		// 난수를 생성하여 lotto 배열에 추
+		// 난수를 생성하여 lotto 배열에 추가
 		for(int i = 0; i<lotto.length;i++) {
 			
 			int ran = (int)(Math.random() * 45 +1);
