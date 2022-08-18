@@ -1,6 +1,7 @@
 package edu.kh.oop.field;
 
 import edu.kh.oop.field.model.vo.Student;
+import edu.kh.oop.field.model.vo.Trainee;
 
 public class FieldRun {
 
@@ -39,12 +40,36 @@ public class FieldRun {
 //		std2.schoolName = "KH대학 부속 고등학교";
 		
 		// static (== 공유 영역) 사용
-		std1.schoolName = "KH대학 부속 고등학교";
+		// std1.schoolName = "KH대학 부속 고등학교";
+		// The static field Student.schoolName should be accessed in a static way
+		
+		// * Static 방식으로 접근하기 *
+		// -> 클래스명.static 필드명/메서드명
+		Student.schoolName = "KH 정보교육원";
 		
 		
 		System.out.println(std1.schoolName);
 		System.out.println(std2.schoolName);
 		
+		System.out.println("=========================================");
+		System.out.println("초기화 블록 확인 하기");
+		
+		Trainee t1 = new Trainee(); // 훈련생 객체 생성
+		
+		System.out.println(t1.name);
+		System.out.println(t1.phone);
+		System.out.println(t1.email); // 초기화 되어 있는가?
+		System.out.println(t1.salary); // 초기화 되어 있는가?
+		System.out.println(t1.classRoom); // 초기화 되어 있는가?
+		
+		
+		Trainee t2 = new Trainee(); // 훈련생 객체 생성
+		
+		System.out.println(t2.name);
+		System.out.println(t2.phone);
+		System.out.println(t2.email); // 초기화 되어 있는가?
+		System.out.println(t2.salary); // 초기화 되어 있는가?
+		System.out.println(t2.classRoom); // 초기화 되어 있는가?
 		
 	}
 
