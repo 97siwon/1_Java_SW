@@ -9,6 +9,7 @@ public class Trainee { // 훈련생
 	
 	public static char classRoom = 'A'; // 강의장
 	
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 	// 명시적 초기화 : 필드 선언 시 바로 값 초기화 
 	// ex) public String email = "없음";
 	
