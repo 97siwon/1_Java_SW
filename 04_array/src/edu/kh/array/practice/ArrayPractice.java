@@ -348,6 +348,45 @@ public class ArrayPractice {
 			}
 			System.out.println();
 		}
+	
+	}
+	
+	
+	public void ex16() {
+		
+		
+		int[][] arr = new int[4][4];
+		
+		for(int row=0; row<arr.length - 1; row++) {
+			for(int col=0; col<arr[row].length - 1; col++) {
+				
+			}
+		}
+		
+		for(int row=0; row<arr.length; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+				System.out.printf("(%d, %d)", row, col);
+		
+			}
+			System.out.println();
+		}
+		
+		
+		int count = 1;
+		
+		for(int row = 1; row <= 3; row++) {
+			for(int col = 1; col <= 4; col++) {
+				
+				System.out.printf("%3d", count++);
+				// 후위 증감 연산을 이용하여
+				// 출력 후 count 값을 1 증가
+			}
+			
+			System.out.println();
+		}
+	
 		
 		
 		
@@ -361,6 +400,5 @@ public class ArrayPractice {
 		
 		
 	}
-	
 	
 }
