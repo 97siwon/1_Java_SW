@@ -133,8 +133,7 @@ public class BranchExample {
 			}
 	
 			System.out.println(i);
-			
-			
+	
 		}
 	}
 	
@@ -320,11 +319,7 @@ public class BranchExample {
 			System.out.printf("현재기록 : %d승 %d무 %d패 \n", win, draw, lose);
 			
 		}
-		
-		
-		
-		
-		
+	
 	}
 	
 	
