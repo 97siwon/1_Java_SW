@@ -310,7 +310,7 @@ public class ArrayPractice {
 	
 	}
 	
-	public void ex14() {
+	public void ex14() { // *****
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -324,6 +324,33 @@ public class ArrayPractice {
 			
 			
 		}
+	
+	}
+	
+	
+	public void ex15() {
+		
+		int[][] arr = new int[3][3];
+	
+		for(int row=0; row<arr.length - 1; row++) {
+			for(int col=0; col<arr[row].length - 1; col++) {
+				
+			}
+		}
+		
+		// 출력용
+		for(int row=0; row<arr.length; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+				System.out.printf("(%d, %d)", row, col);
+		
+			}
+			System.out.println();
+		}
+		
+		
+		
 		
 		
 		
@@ -334,5 +361,6 @@ public class ArrayPractice {
 		
 		
 	}
+	
 	
 }
