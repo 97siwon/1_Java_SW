@@ -45,7 +45,7 @@ public class WhileExample {
 		// while 기초 사용법2
 		
 		// 입력되는 모든 정수의 합구하기
-		// 단, 0이 입력되는 반복 종료
+		// 단, 0이 입력되면 반복 종료
 		
 		Scanner sc = new Scanner(System.in);
 		
