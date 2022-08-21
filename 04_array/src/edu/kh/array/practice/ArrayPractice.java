@@ -354,6 +354,7 @@ public class ArrayPractice {
 	
 	public void ex16() {
 		
+		int count = 1;
 		
 		int[][] arr = new int[4][4];
 		
@@ -367,38 +368,147 @@ public class ArrayPractice {
 			
 			for(int col=0; col<arr[row].length; col++) {
 				
-				System.out.printf("(%d, %d)", row, col);
-		
-			}
-			System.out.println();
-		}
-		
-		
-		int count = 1;
-		
-		for(int row = 1; row <= 3; row++) {
-			for(int col = 1; col <= 4; col++) {
-				
 				System.out.printf("%3d", count++);
-				// 후위 증감 연산을 이용하여
-				// 출력 후 count 값을 1 증가
+		
 			}
-			
 			System.out.println();
 		}
+
+	}
 	
+	
+	public void ex17() {
 		
+		int[][] arr = new int[4][4];
 		
+		System.out.println(arr.length);
 		
+		int count = 16;
 		
+		for(int row=0; row<arr.length - 1; row++) {
+			for(int col=0; col<arr[row].length - 1; col++) {
+				
+			}
+		}
 		
+		for(int row=0; row<arr.length; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+				System.out.printf("%3d", count--);
 		
-		
-		
-		
-		
-		
+			}
+			System.out.println();
+		}	
 		
 	}
 	
+	public void ex18() { 
+		
+		int[][] arr = new int[4][4];
+		
+		for(int row = 0; row < arr.length -1; row++) {
+			for(int col = 0; col < arr[row].length -1; col++) {
+				
+				// 난수 생성 
+				int ran = (int)(Math.random()*10 + 1);
+				arr[row][col] = ran;
+				
+				// 각 행의 마지막 열
+				arr[row][arr[row].length-1] += ran; // 생성된 난수 누적
+				
+				// 각 행의 마지막 행
+				arr[arr.length-1][col] += ran; // 생성된 난수 누적
+				
+				// 마지막 행, 마지막 열
+				arr[arr.length-1][arr[row].length-1] += ran; // 생성된 난수 누적
+				
+			}
+		}
+		for(int row=0; row<arr.length; row++) {
+			
+			for(int col=0; col<arr[row].length; col++) {
+				
+				System.out.printf("%3d",arr[row][col]);
+		
+			}
+			System.out.println();
+		}			
+		
+	}
+	
+	
+	public void ex19() { //*****
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("행 크기 : ");
+		int rowNum = sc.nextInt();
+		
+		System.out.print("열 크기 : ");
+		int colNum = sc.nextInt();
+		
+		
+		int[][] arr = new int[rowNum][colNum];
+		
+		for(int row = 0; row < arr.length - 1; row++) {
+			for(int col = 0; col < arr[row].length -1; col++) {
+				
+				int ran = (int)(Math.random()*26+65);
+				arr[row][col] = ran;
+				
+			}
+		}	
+		
+		for(int row = 0; row < arr.length ; row++) {
+			for(int col = 0; col < arr[row].length; col++) {
+				
+				System.out.printf("%2d", (char)arr[row][col]);
+				
+			}
+		}
+	
+	}
+	
+	
+	public void ex20() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int rowNum;
+		int colNum;
+		char[][] arr;
+		char ch = 'a';
+
+		System.out.print("행의 크기 : ");
+		rowNum = sc.nextInt();
+		
+		arr = new char[rowNum][];
+		
+		for(int row = 0; row < arr.length; row++) {
+			
+			System.out.print(row + "열의 크기 : ");
+			colNum = sc.nextInt();
+			
+			arr[row] = new int[colNum];
+			
+			for(int col = 0; col < arr[row].length ; col++) {
+				
+				arr[row][col] = ch++;
+			
+			}
+
+			for(row = 0; row < arr.length ; row++) {
+				for(int col = 0; col < arr[row].length ; col++) {
+					System.out.println(arr[row][col] + " ");
+					System.out.println();
+				}
+			}
+			
+			
+		}
+		
+	
+		
+	}
 }
