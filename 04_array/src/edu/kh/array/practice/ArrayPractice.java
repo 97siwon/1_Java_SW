@@ -487,13 +487,61 @@ public class ArrayPractice {
 			
 			for(int col=0; col<arr[row].length ; col++) {
 			}
-			System.out.println();
+			
 		}
 			
 			
-		}
+	}
 		
 	
+	public void ex21() { //*****
 		
+		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실",
+				"윤예의", "진재주", "차천축", "피풍표", "홍하하"};
+		
+		String[][] arr = new String[3][2];
+	
+		
+	}
+		
+	
+	public void ex22() {
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	public void ex23() { // *****
+		
+		String[][] arr = new String[6][6];
+		
+		for(int row = 0; row < arr.length; row++){
+			for(int col = 0; col < arr[row].length; col++) {
+				
+				// 각 행의 1번째 행
+				System.out.print(arr[1][col]);
+				
+				// 각 행의 1번째  
+				System.out.print(arr[row][1]);
+				
+				
+			}
+		}
+		
+		
+	}
+	
+	public void ex24() {
+		
+		
+		
+		
+		
+		
+	}
 	
 }

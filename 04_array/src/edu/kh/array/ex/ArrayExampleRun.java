@@ -11,17 +11,17 @@ public class ArrayExampleRun {
 //		arrayEx.ex3();
 //		arrayEx.ex4();
 //		arrayEx.ex5();
-//		arrayEx.ex6();s
+//		arrayEx.ex6();
 //		arrayEx.ex7();
 //		arrayEx.ex8();
 //		arrayEx.createLottoNumber();
 //		arrayEx.ex9();
 //		arrayEx.ex10();
-		arrayEx.ex11();
+//		arrayEx.ex11();
 		
+		ArrayExample2 array2Ex = new ArrayExample2();
 		
-		
-		
+		array2Ex.ex3();
 		
 
 	}
