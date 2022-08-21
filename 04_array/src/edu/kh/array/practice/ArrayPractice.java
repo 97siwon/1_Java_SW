@@ -471,44 +471,29 @@ public class ArrayPractice {
 	}
 	
 	
-	public void ex20() {
+	public void ex20() { //*****
 		
 		Scanner sc = new Scanner(System.in);
-		
-		int rowNum;
-		int colNum;
-		char[][] arr;
-		char ch = 'a';
 
 		System.out.print("행의 크기 : ");
-		rowNum = sc.nextInt();
+		int num = sc.nextInt();
 		
-		arr = new char[rowNum][];
+		int[][] arr = new int[num][];
 		
-		for(int row = 0; row < arr.length; row++) {
+		for(int row=0; row<arr.length;row++) {
 			
-			System.out.print(row + "열의 크기 : ");
-			colNum = sc.nextInt();
+			System.out.print("열의 크기 : ");
+			arr[row] = new int[sc.nextInt()];
 			
-			arr[row] = new int[colNum];
-			
-			for(int col = 0; col < arr[row].length ; col++) {
-				
-				arr[row][col] = ch++;
-			
+			for(int col=0; col<arr[row].length ; col++) {
 			}
-
-			for(row = 0; row < arr.length ; row++) {
-				for(int col = 0; col < arr[row].length ; col++) {
-					System.out.println(arr[row][col] + " ");
-					System.out.println();
-				}
-			}
+			System.out.println();
+		}
 			
 			
 		}
 		
 	
 		
-	}
+	
 }
