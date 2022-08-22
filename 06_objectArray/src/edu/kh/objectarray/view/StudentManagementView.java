@@ -29,7 +29,7 @@ public class StudentManagementView {
 			System.out.println("2. 학생 전체 정보 조회");
 			System.out.println("3. 학생 1명 정보 조회(인덱스)");
 			System.out.println("4. 학생 정보 조회(이름 검색)");
-			System.out.println("5. 학생 정보 수정(인덱스)");
+			System.out.println("5. 학생 정보 수정(인덱스)"); // 점수 수정
 			System.out.println("0. 종료");
 			System.out.println("---------------------------");
 			
@@ -141,7 +141,32 @@ public class StudentManagementView {
 	}
 	
 	
-	
+	/**
+	 * 학생 정부(점수) 수정 메서드
+	 */
+	public void updateStudent() {
+		
+		System.out.println("[학생 정보 수정(인덱스)]");
+		
+		System.out.print("인덱스 : ");
+		int idx = sc.nextInt();
+		
+		System.out.print("국어 : ");
+		int kor = sc.nextInt();
+		
+		System.out.print("영어 : ");
+		int eng = sc.nextInt();
+		
+		System.out.print("수학 : ");
+		int math = sc.nextInt();
+		
+		// 학생 정보 수정 서비스 메서드 호출 후 결과 반환 받기
+		int result = service.updateStudent(idx, kor, eng, math);
+		
+		
+		
+		
+	}
 	
 	
 	

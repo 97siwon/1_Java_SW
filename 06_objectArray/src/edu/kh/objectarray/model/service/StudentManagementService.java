@@ -103,7 +103,36 @@ public class StudentManagementService {
 	}
 	
 	
-	
+	/** 학생 정보 수정 서비스 메서드
+	 * @param idx
+	 * @param kor
+	 * @param eng
+	 * @param math
+	 * @return
+	 * -1 : idx가 stdArr 배열의 범위를 초과한 경우 
+	 *  0 : stdArr[idx] 인덱스가 null인 경우(참조X)
+	 *  1 : 정상적으로 수정이 된 경우
+	 */
+	public int updateStudent(int idx, int kor, int eng, int math) {
+		
+		if(idx < 0 || idx > stdArr.length) {
+			return -1;
+			
+		} else {
+			
+			if (stdArr[idx] == null) {
+				return 0;
+				
+			} else {
+				stdArr[idx].setKor(kor);
+				stdArr[idx].setEng(eng);
+				stdArr[idx].setMath(math);
+				
+				return 1;
+			}
+		}
+		
+	}
 	
 	
 	
