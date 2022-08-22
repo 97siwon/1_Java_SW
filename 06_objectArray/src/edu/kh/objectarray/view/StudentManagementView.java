@@ -46,9 +46,9 @@ public class StudentManagementView {
 				break;
 			case 3 : selectIndex();
 				break;
-			case 4 : 
+			case 4 : selectName();
 				break;
-			case 5 : 
+			case 5 : updateStudent();
 				break;
 			case 0 : System.out.println("프로그램을 종료합니다."); 
 				break;
@@ -163,13 +163,63 @@ public class StudentManagementView {
 		// 학생 정보 수정 서비스 메서드 호출 후 결과 반환 받기
 		int result = service.updateStudent(idx, kor, eng, math);
 		
+		if(result == -1) {
+			System.out.println("입력한 값이 인덱스 범위를 초과했습니다.");
+		} else if (result == 0) {
+			System.out.println("해당 인덱스에 학생 정보가 존재하지 않습니다.");
+		} else {
+			System.out.println("수정되었습니다.");
+		}
+
+	}
+	
+	
+	/**
+	 * 학생 정보 조회(이름) 메서드
+	 */
+	public void selectName() {
+		System.out.println("[학생 정보 조회(이름)]");
+		System.out.print("이름 : ");
+		String name = sc.next();
+		
+		
+		// 학생 정보 조회(이름) 서비스 메서드 호출 후 결과 반환
+		Student[] resultArr = service.selectName(name);
+		
+		if(resultArr == null) {
+			System.out.println("검색 결과가 없습니다.");
+			
+		} else {
+			
+			for(int i= 0; i < resultArr.length; i++) {
+				
+				if(resultArr[i] == null) { // 검색 결과가 더 이상 없음
+					break;
+				}
+				
+				// 홍길동(3학년 5반 17번)
+				System.out.printf("%s(%d학년 %d반 %d번)\n",
+						resultArr[i].getName(), 
+						resultArr[i].getGrade(),
+						resultArr[i].getClassRoom(),
+						resultArr[i].getNumber());
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
 	}
-	
-	
-	
 	
 	
 	
