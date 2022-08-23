@@ -46,7 +46,7 @@ public class Student {
 
 	// getter / setter 자동완성
 	// alt + (shift) + s or Source 메뉴
-	// -> r (Generate Getters and Setters)s
+	// -> r (Generate Getters and Setters)
 	
 	public int getGrade() {
 		return grade;

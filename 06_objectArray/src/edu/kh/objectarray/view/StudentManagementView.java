@@ -5,7 +5,7 @@ import java.util.Scanner;
 import edu.kh.objectarray.model.service.StudentManagementService;
 import edu.kh.objectarray.model.vo.Student;
 
-// 화면 제공용 클래스(입/출력
+// 화면 제공용 클래스(입/출력)
 public class StudentManagementView {
 
 	// 필드 == 멤버변수
@@ -208,22 +208,7 @@ public class StudentManagementView {
 			
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
-	
-	
-	
-	
-	
 	
 }
