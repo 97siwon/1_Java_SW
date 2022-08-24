@@ -180,18 +180,7 @@ public class Example1 {
 			((Spark)c).dc();
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
 	
 	
