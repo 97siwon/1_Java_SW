@@ -10,7 +10,9 @@ public class Run {
 		
 		IOService service = new IOService();
 
-		service.output();
+//		service.output();
+//		service.input();
+		service.fileCopy();
 	}
 
 }
