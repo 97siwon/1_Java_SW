@@ -72,8 +72,7 @@ public class User {
 		return userGender;
 	}
 	
-	
-	
+
 	
 	
 	
