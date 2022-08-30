@@ -96,8 +96,8 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", empNo=" + empNo + ", email=" + email
-				+ ", phone=" + phone + ", departmentTitle=" + departmentTitle + ", jobName=" + jobName + ", salary="
+		return "Employee [사원 번호=" + empId + ", 사원 이름=" + empName + ", 주민등록번호=" + empNo + ", 이메일=" + email
+				+ ", 전화번호=" + phone + ", 부서명=" + departmentTitle + ", 직급명=" + jobName + ", 급여="
 				+ salary + "]";
 	}
 	

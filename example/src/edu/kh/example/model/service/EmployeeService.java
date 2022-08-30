@@ -54,6 +54,32 @@ public class EmployeeService {
 	}
 	
 	
+	/**
+	 * @param id
+	 * @param departmentTitle
+	 * @param jobName
+	 * @return 
+	 */
+	public boolean updateEmployee(int id, String departmentTitle, String jobName) {
+		
+		List<Employee> resultList = new ArrayList<Employee>();
+		
+		for( Employee e : empList ) {
+			
+			if(e.getEmpId() != id ) {
+				return false;
+			} else {
+				empList.get(id).setDepartmentTitle(departmentTitle);
+				empList.get(id).setJobName(jobName);
+				
+				return true;
+			}
+		}
+		return false;
+		
+
+	}
+	
 	
 	
 }

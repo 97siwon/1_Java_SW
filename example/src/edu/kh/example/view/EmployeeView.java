@@ -43,7 +43,7 @@ public class EmployeeView {
 				case 1 : addEmployee(); break;
 				case 2 : selectAll(); break;
 				case 3 : selectEmployee(); break;
-				case 4 : break;
+				case 4 : updateEmployee(); break;
 				case 5 : break;
 				case 6 : break;
 				case 7 : break;
@@ -139,9 +139,51 @@ public class EmployeeView {
 			}
 			
 		}
+	}
+	
+	
+	/**
+	 * 4. 사번이 일치하는 사원 정보 수정
+	 */
+	public void updateEmployee() {
+		System.out.println("[사번이 일치하는 사원 정보 수정]");
+		
+		System.out.print("수정할 사원의 사번을 입력하세요. : ");
+		int id = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("수정할 부서명 : ");
+		String departmentTitle = sc.next();
+
+		System.out.print("수정할 직급명 : ");
+		String jobName = sc.next();
+		
+		if(service.updateEmployee(id, departmentTitle, jobName)) {
+			System.out.println("성공");
+		} else {
+			System.out.println("실패");
+		}
+		
+//		List<Employee> resultList = service.selectEmployee(id);
+		
+//		if( resultList.isEmpty() ) {
+//			System.out.println("검색 결과가 없습니다.");
+//		} else {
+//			
+//			for( Employee e : resultList ) {
+//				System.out.println(e);
+//			}
+//			
+//		}
+		
+		
+		
+		
+		
+		
+		
 		
 		
 	}
-	
 	
 }
